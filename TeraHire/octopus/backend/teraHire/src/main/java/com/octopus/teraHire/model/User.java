@@ -1,49 +1,32 @@
 package com.octopus.teraHire.model;
 
 
+import javax.persistence.Entity;
 import javax.persistence.*;
-import java.sql.Date;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "user_table")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long Id;
-    @Column(name = "username")
-    private String username;
-    @Column(name = "email")
-    private String email;
-    @Column(name = "password")
-    private String password;
-    @Column(name = "first_name")
-    private String firstName;
-    @Column(name = "last_name")
-    private String lastName;
-    @Column(name = "phone_number")
+    long Id;
+    String username;
+    String email;
+    String password;
+    String FirstName;
+    String LastName;
 
-    private String phoneNumber;
-    @Column(name = "created_date")
+    public User(){
 
-    private Date createdDate;
-
-    @Column(name = "modified_date")
-    private Date modifiedDate;
-
-    public User() {
     }
-
-    public User(long id, String username, String email, String password, String firstName, String lastName, String phoneNumber, Date createdDate, Date modifiedDate) {
+    public User(long id, String username, String email, String password, String firstName, String lastName) {
         Id = id;
         this.username = username;
         this.email = email;
         this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.createdDate = createdDate;
-        this.modifiedDate = modifiedDate;
+        FirstName = firstName;
+        LastName = lastName;
     }
 
     public long getId() {
@@ -79,42 +62,18 @@ public class User {
     }
 
     public String getFirstName() {
-        return firstName;
+        return FirstName;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        FirstName = firstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return LastName;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public Date getModifiedDate() {
-        return modifiedDate;
-    }
-
-    public void setModifiedDate(Date modifiedDate) {
-        this.modifiedDate = modifiedDate;
+        LastName = lastName;
     }
 }
