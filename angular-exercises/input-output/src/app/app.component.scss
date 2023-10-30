@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    justify-content: center;
+}
+.right{
+    width: 500px;
+    height: 600px;
+    margin: 5px;
+    box-shadow: 0px 2px 3px #ddd;
+}
+.btn{
+    padding: 10px 12px;
+    background-color: #333;
+    color: #ddd;
+    box-shadow: 0px 2px 3px;
+    border: none;
+    border-radius: 5px;
+}
+.left{
+    width: 500px;
+    height: 600px;
+    box-shadow: 0px 2px 3px #ddd;
+}
+.message-text-box{
+    padding: 10px 12px;
+    width: 100%;
+}
+.con-bottom{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
